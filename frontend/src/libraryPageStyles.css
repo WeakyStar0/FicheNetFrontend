@@ -1,0 +1,33 @@
+.container {
+    padding: 20px;
+  }
+  
+  .library-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .game-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  
+  .game-info {
+    padding: 10px;
+  }
+  

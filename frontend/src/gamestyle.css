@@ -1,0 +1,110 @@
+.container-centered {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.game-container {
+    background-color: rgba(28, 28, 28, 1);
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    left: 10%;
+    transition: transform 0.3s ease;
+}
+
+.game-container:hover {
+    transform: scale(1.015);
+}
+
+.game-img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    float: left;
+    width: auto;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+}
+
+.game-details {
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+}
+
+.game-title {
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+}
+
+.game-genre {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.game-desc {
+    font-size: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.game-price {
+    text-align: right;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.price-old {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    padding: 95px 10px;
+    color: rgba(0, 89, 254, 1);
+    margin-top: 10px;
+    text-decoration: line-through;
+
+}
+
+.cart-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 89, 254, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.discount {
+    position: absolute;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 89, 254, 1);
+    right: 13%;
+    bottom: 22%;
+}
+
+.container a i:hover {
+    opacity: 50%;
+    color: black;
+}

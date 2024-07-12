@@ -1,0 +1,344 @@
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
+
+
+.disable-click {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    position: relative;
+    background: url('https://imgur.com/DPnU1aU.png') repeat;
+    background-size: 10%;
+    font-family: 'Metropolis', Courier;
+}
+
+h4 {
+    color: white;
+}
+
+hr {
+    border: none;
+    background-color: rgba(0, 89, 254, 1);
+    height: 1px;
+    margin: 20px 0;
+    width: 125%;
+    margin-left: -12.5%;
+    margin-right: -12.5%;
+}
+
+.line1 {
+    margin: 15px 0;
+    width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.left-container {
+    width: 70%;
+    padding-bottom: 30px;
+}
+
+.right-container {
+    width: 20%;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.right-container img {
+    max-width: 100%;
+    height: auto;
+
+    pointer-events: none;
+    /* Make the image unclickable */
+    user-select: none;
+    /* Prevent text selection */
+    -webkit-user-drag: none;
+    /* Prevent dragging in WebKit browsers */
+    -webkit-user-select: none;
+    /* Chrome, Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.right-container .btn {
+    margin: 5px 0;
+    padding: 15px 25px;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: rgba(0, 89, 254, 1);
+    color: white;
+}
+
+.right-container .btn:hover {
+    background-color: rgb(0, 45, 128);
+}
+
+.btn-wishlist {
+    background-color: rgba(28, 28, 28, 1) !important;
+    padding: 15px 25px !important;
+}
+
+.btn-wishlist:hover {
+    background-color: rgb(19, 19, 19) !important;
+}
+
+.basegame {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: rgba(28, 28, 28, 1) !important;
+    margin-top: 4px;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* Padrão */
+
+    vertical-align: top;
+}
+
+.price,
+.basegame {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 600;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.frame {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.edge {
+    border-radius: 5px;
+}
+
+.frame img {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thumbnails img {
+    border-radius: 5px;
+    width: calc(20% - 10px);
+    cursor: pointer;
+}
+
+.gamedesc {
+    color: white;
+}
+
+.gameinfo {
+    font-size: 75%;
+    text-align: left;
+}
+
+.btnaddon {
+    border-radius: 15px;
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgba(0, 89, 254, 1);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btnaddon:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btnaddon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 89, 254, 1);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btnaddon:hover::before {
+    transform: translateX(0);
+    text-decoration: none;
+}
+
+#bounce {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+#bounce:hover {
+    animation: bounce-animation 0.4s ease-in-out;
+}
+
+@keyframes bounce-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.background-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.scrolling-text {
+    position: absolute;
+    top: 55%;
+    left: 100%;
+    transform: translateY(-50%);
+    font-size: 64px;
+    font-weight: 700;
+    font-size: 300px;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.1);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+.member-image {
+    border: 12px #000;
+    border-style: double double solid solid;
+    max-width: 200px;
+}
+
+.line4 {
+    top: 30%;
+    position: absolute;
+    border-width: 90px;
+    z-index: -2;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.line5 {
+    top: 64%;
+    position: absolute;
+    border-width: 90px;
+    z-index: -2;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.halftone {
+    background-image: radial-gradient(circle at center,
+            black 0.25rem,
+            transparent 0), radial-gradient(circle at center, black 0.25rem, transparent 0);
+    background-size: 1.3rem 1.3rem;
+    background-position: 0 0, 0.65rem 0.65rem;
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    right: 0;
+    bottom: 19%;
+    z-index: -3;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.wave {
+    filter: brightness(1.1);
+    position: absolute;
+    top:5%;
+    transform: scale(1.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.wave2 {
+    filter: brightness(0.2);
+    position: absolute;
+    top:5%;
+    transform: scale(1.2);
+    width: 100vw;
+    height: 100vh;
+    left: 2%;
+    z-index: -2;
+}

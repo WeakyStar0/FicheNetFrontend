@@ -1,0 +1,74 @@
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
+
+
+.disable-click {
+    pointer-events: none;
+}
+
+body {
+    background: url('https://imgur.com/DPnU1aU.png') repeat;
+    background-size: 10%;
+    font-family: 'Metropolis', Courier;
+}
+
+.destaques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3em;
+    color: white;
+    background-color: rgba(0, 89, 254, 1);
+    height: 100px;
+    margin-bottom: 35px;
+}
+
+.sale {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 8em;
+    text-shadow: 8px 8px 0 rgba(0, 89, 254, 1);
+    text-align: center;
+    line-height: 0.9;
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.carousel-item {
+    overflow: hidden;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    height: 777px;
+}
+
+.carousel-indicators {
+    transform: scale(1.7);
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 89, 254, 1);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 15px;
+}
